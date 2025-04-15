@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Elite Stays</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #d0eaff, #b0d7ff);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #003366, #00509e);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 { font-size: 28px; font-weight: 600; color: #fff; }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    nav a:hover { opacity: 0.8; }
+
+    section { padding: 50px 30px; text-align: center; animation: fadeIn 1s ease-in; }
+
+    h2, h3 { color: #003366; margin-bottom: 20px; }
+    p { max-width: 800px; margin: auto; font-size: 18px; line-height: 1.6; color: #444; }
+
+  
+
+    .fun-facts {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .fact {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 180px;
+    }
+
+    .testimonials {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    .testimonial {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><strong>Elite Stays</strong></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="booking.html">Book Now</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>About Elite Stays</h2>
+    <p>Elite Stays combines luxury and technology to offer smart hospitality experiences. Our goal is to deliver comfort, convenience, and top-tier service to every guest.</p>
+    </br>
+    <h2>Our Mission</h2>
+    <p>To redefine hospitality using AI and personalized care.</p>
+    <h2>Our Vision</h2>
+    <p>To become the most innovative hotel brand in India and beyond.</p>
+  </section>
+
+  
+
+  <section>
+    <h2>What Guests Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        “The stay was so smooth, the AI assistance made everything seamless!”<br>— Aditi P.
+      </div>
+      <div class="testimonial">
+        “Loved the luxury and responsiveness of the staff. 10/10.”<br>— Nikhil R.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Fun Facts</h2>
+    <div class="fun-facts">
+      <div class="fact">
+        <h4>50+</h4>
+        <p>Smart Rooms</p>
+      </div>
+      <div class="fact">
+        <h4>4.8★</h4>
+        <p>Average Rating</p>
+      </div>
+      <div class="fact">
+        <h4>24x7</h4>
+        <p>AI Concierge</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,164 @@
+:root {
+  --primary: #2b2d42;
+  --secondary: #8d99ae;
+  --accent: #ef233c;
+  --light: #edf2f4;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--light);
+  color: var(--primary);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: var(--light);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero img {
+  width: 90%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  color: var(--primary);
+}
+
+.hero p {
+  color: var(--secondary);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.8rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #d90429;
+}
+
+.form-container {
+  background: white;
+  padding: 2.5rem;
+  margin: 3rem auto;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 0.9rem;
+  margin: 0.6rem 0;
+  font-size: 1rem;
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+}
+
+form button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: var(--accent);
+}
+
+/* Animation Classes */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.room-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.room-card {
+  border: 2px solid #ccc;
+  border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  flex: 1 1 30%;
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.room-card input[type="radio"] {
+  display: none;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+.room-card input[type="radio"]:checked + .room-content {
+  border-color: #007BFF;
+  background-color: #e0f0ff;
+}
+
+.room-content {
+  pointer-events: none;
+}

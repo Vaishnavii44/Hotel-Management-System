@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Room - Elite Stays</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+      background: linear-gradient(to right, #d0eaff, #b0d7ff);
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+    header h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #003366;
+    }
+
+    .form-container {
+      background: linear-gradient(135deg, #a6c8ff, #e0f0ff);
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .form-container.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    form input, form select, form button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: none;
+      font-size: 14px;
+      background-color: #ffffffcc;
+    }
+
+    form h2 {
+      color: #003366;
+      margin-bottom: 15px;
+    }
+
+    label {
+      color: #003366;
+      font-weight: 500;
+      margin-top: 10px;
+      display: block;
+    }
+
+    button {
+      background: linear-gradient(to right, #2575fc, #6a11cb);
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.03);
+    }
+
+    .room-options {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 20px;
+    }
+
+    .room-card {
+      border: 2px solid #b3d1ff;
+      border-radius: 12px;
+      padding: 15px;
+      background: #f5faff;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .room-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .room-card label {
+      color: #003366;
+    }
+
+    .room-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Book Your Stay at <span>Elite Stays</span></h1>
+  </header>
+
+  <div class="form-container">
+    <form action="payment.html" method="GET">
+      <h2>Reservation Form</h2>
+      <label>Full Name:</label>
+      <input type="text" placeholder="Full Name" required />
+      <label>Number of Days:</label>
+      <input type="number" placeholder="Number of Days" required />
+
+      <label>Check-in Date:</label>
+      <input type="date" name="checkin" required />
+      <label>Check-out Date:</label>
+      <input type="date" name="checkout" required />
+      <label>Number of Guests:</label>
+      <input type="number" placeholder="Number of Guests" required />
+
+      <div class="room-options">
+        <!-- Standard -->
+        <div class="room-card">
+          <label>
+            <input type="radio" name="room-type" value="standard" />
+            <h2><strong>Standard Room</strong></h2> Cozy and affordable
+          </label>
+          <img src="standard.webp" alt="Standard Room">
+          <div class="options">
+            <select name="standard-bed">
+              <option value="">Select Bed Type</option>
+              <option value="single">Single Bed</option>
+              <option value="double">Double Bed</option>
+            </select>
+            <select name="standard-ac">
+              <option value="">Select AC Type</option>
+              <option value="ac">AC</option>
+              <option value="non-ac">Non-AC</option>
+            </select>
+            <select name="standard-service">
+              <option value="">Room Service</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Deluxe -->
+        <div class="room-card">
+          <label>
+            <input type="radio" name="room-type" value="deluxe" />
+            <h2><strong>Deluxe Room</strong></h2> More space and comfort
+          </label>
+          <img src="deluxe.webp" alt="Deluxe Room">
+          <div class="options">
+            <select name="deluxe-bed">
+              <option value="">Select Bed Type</option>
+              <option value="single">Single Bed</option>
+              <option value="double">Double Bed</option>
+            </select>
+            <select name="deluxe-ac">
+              <option value="">Select AC Type</option>
+              <option value="ac">AC</option>
+              <option value="non-ac">Non-AC</option>
+            </select>
+            <select name="deluxe-service">
+              <option value="">Room Service</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Suite -->
+        <div class="room-card">
+          <label>
+            <input type="radio" name="room-type" value="suite" />
+            <h2><strong>Suite</strong></h2> Luxury experience
+          </label>
+          <img src="suite.webp" alt="Suite">
+          <div class="options">
+            <select name="suite-bed">
+              <option value="">Select Bed Type</option>
+              <option value="double">Double Bed</option>
+              <option value="king">King Size Bed</option>
+            </select>
+            <select name="suite-ac">
+              <option value="">Select AC Type</option>
+              <option value="ac">AC</option>
+              <option value="non-ac">Non-AC</option>
+            </select>
+            <select name="suite-service">
+              <option value="">Room Service</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+
+  <script>
+  // Animation on scroll
+  document.addEventListener("DOMContentLoaded", () => {
+    // Scroll animation
+    const formContainer = document.querySelector('.form-container');
+    const roomCards = document.querySelectorAll('.room-card');
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(formContainer);
+    roomCards.forEach(card => observer.observe(card));
+
+    const checkAndShow = el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        el.classList.add('show');
+      }
+    };
+
+    checkAndShow(formContainer);
+    roomCards.forEach(checkAndShow);
+
+    // Auto-set checkout date
+    const daysInput = document.querySelector('input[placeholder="Number of Days"]');
+    const checkinInput = document.querySelector('input[name="checkin"]');
+    const checkoutInput = document.querySelector('input[name="checkout"]');
+
+    function updateCheckoutDate() {
+      const days = parseInt(daysInput.value);
+      const checkinValue = checkinInput.value;
+
+      if (!isNaN(days) && checkinValue) {
+        const checkinDate = new Date(checkinValue);
+        checkinDate.setDate(checkinDate.getDate() + days);
+        const year = checkinDate.getFullYear();
+        const month = String(checkinDate.getMonth() + 1).padStart(2, '0');
+        const day = String(checkinDate.getDate()).padStart(2, '0');
+        checkoutInput.value = `${year}-${month}-${day}`;
+      }
+    }
+
+    daysInput.addEventListener('input', updateCheckoutDate);
+    checkinInput.addEventListener('input', updateCheckoutDate);
+  });
+
+
+  </script>
+</body>
+</html>
